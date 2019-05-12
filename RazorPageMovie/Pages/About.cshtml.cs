@@ -12,7 +12,7 @@ namespace RazorPageMovie.Pages
 
         public void OnGet()
         {
-            Message = "Your application description page.";
+            Message = "Your application description page. Moja treść";
         }
     }
 }

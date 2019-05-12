@@ -1,0 +1,50 @@
+﻿@page
+@model RazorPageMovie.Movies.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Moveies</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Moveies.ID" />
+            <div class="form-group">
+                <label asp-for="Moveies.Title" class="control-label"></label>
+                <input asp-for="Moveies.Title" class="form-control" />
+                <span asp-validation-for="Moveies.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Moveies.ReleaseDate" class="control-label"></label>
+                <input asp-for="Moveies.ReleaseDate" class="form-control" />
+                <span asp-validation-for="Moveies.ReleaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Moveies.Genre" class="control-label"></label>
+                <input asp-for="Moveies.Genre" class="form-control" />
+                <span asp-validation-for="Moveies.Genre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Moveies.Price" class="control-label"></label>
+                <input asp-for="Moveies.Price" class="form-control" />
+                <span asp-validation-for="Moveies.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
